@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Capturar Pokemon</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<div class="html-editor-align-center">
+    <h4>Ingrese los siguientes datos para poder capturar a su pokemon</h4>
+</div>
+<div style="margin-top: 10px">
+    <h>Ingresa el apodo y la especie de tu pokemon</h>
+</div>
+<div class="container mt-4">
+    <form action="/capturar" method="post" class="col-sm-5">
+        <div class="card">
+            <div class="card-header">
+                <h2>Capturar Pokemon</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Apodo</label><input type="text" name="apodo" class="form-control"/>
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Guardar" class="btn btn-info"/>
+                <a  href="/inicio" class="btn btn-danger">Regresar</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
