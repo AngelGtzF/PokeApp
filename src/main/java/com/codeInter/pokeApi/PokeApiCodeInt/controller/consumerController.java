@@ -23,6 +23,7 @@ public class consumerController {
     private RestTemplate restTemplate;
     //private String pkmnTypeId="1";//del 1 al 18
     private  String url = "https://pokeapi.co/api/v2/type/";
+    public int n=1;
 
 
     //Aqui va el jackson que toma el tipo PkmnTypes y luego lo debe meter en una lista y asi iterar cada tipo
@@ -56,9 +57,9 @@ public class consumerController {
 
 
         try {
-            for (int i = 1; i < 3; i++) {
+           // for (int i = 1; i < 4; i++) {
                 // int i=1;
-                String tempUrl = url + i;
+                String tempUrl = url + n;
                 HttpHeaders headers = new HttpHeaders();
                 headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
                 headers.add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
@@ -102,8 +103,8 @@ public class consumerController {
                     }
 
                 }
-            }
-        
+           // }
+
         generaciones.put("1era Generacion", lista1gen);
         generaciones.put("2da Generacion", lista2gen);
         generaciones.put("3ra Generacion", lista3gen);
@@ -111,7 +112,7 @@ public class consumerController {
         generaciones.put("5ta Generacion", lista5gen);
         generaciones.put("6ta Generacion", lista6gen);
 
-
+        n++;
         return  generaciones;
 
         }
