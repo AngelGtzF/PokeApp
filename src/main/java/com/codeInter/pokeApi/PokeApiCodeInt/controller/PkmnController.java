@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+//Controlador encargado de pasar a las vistas de html y hacer los movimientos en la base de datos
 @Controller
 public class PkmnController {
     private PkmnService pkmnService;
